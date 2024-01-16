@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // public void Play(){
-    //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    // }
     public void Play()
     {
         // Ładuje scenę z grą (zmień "GameScene" na nazwę twojej sceny z grą)
@@ -29,9 +26,4 @@ public class MainMenu : MonoBehaviour
                 Application.Quit();
         #endif
     }
-    
-    // public void QuitTheGame(){
-    //     Application.Quit();
-    //     Debug.Log("Player Has Quit The Game");
-    // }
 }
