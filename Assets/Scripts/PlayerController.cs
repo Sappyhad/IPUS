@@ -14,16 +14,16 @@ public class PlayerMovement : MonoBehaviour
         // Tworzenie wektora kierunku z uwzględnieniem orientacji kamery
         Vector3 direction = CalculateMoveDirection(horizontal, vertical);
 
-        // Odczyt ruchu myszy
+        // Odczyt myszki
         float mouseX = Input.GetAxis("Mouse X");
 
         // Obliczanie wektora przesunięcia i normalizacja
         Vector3 movement = direction * speed * Time.deltaTime;
 
-        // Przesunięcie gracza (czytaj: kamery)
+        // Przesunięcie gracza
         transform.Translate(movement);
 
-        // Obroty związane z ruchem myszy
+        // Obroty kamery przez ruch myszki
         transform.Rotate(Vector3.up * mouseX * rotationSpeed);
     }
 
@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 cameraForward = Camera.main.transform.forward;
         Vector3 cameraRight = Camera.main.transform.right;
 
-        // Zresetuj y na 0, aby ruch był płaski
+        // Zresetuj y na 0 żeby ruch był płaski
         cameraForward.y = 0f;
         cameraRight.y = 0f;
 

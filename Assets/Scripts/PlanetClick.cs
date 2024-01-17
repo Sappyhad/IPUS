@@ -50,7 +50,6 @@ public class PlanetClick : MonoBehaviour
                 // Sprawdź, czy uderzony obiekt to ten, który chcesz obsłużyć
                 if (hit.collider.gameObject == this.gameObject)
                 {
-                    // Kliknięto na tym obiekcie, więc wykonaj resztę kodu
                     nextPosition = true;
                 }
             }
@@ -61,7 +60,7 @@ public class PlanetClick : MonoBehaviour
             camera.LookAt(transform.position);
             ChangeCameraPosition(targetTransform);
 
-            // Aktywuj panel UI, jeśli nie jest już aktywowany
+            // Aktywuj panel UI, jeśli nie jest już aktywny
             if (uiPanel != null && !uiPanel.activeSelf)
             {
                 uiPanel.SetActive(true);
@@ -73,7 +72,6 @@ public class PlanetClick : MonoBehaviour
     {
         camera.position = Vector3.Lerp(camera.position, targetTransform.position, Time.deltaTime / animationDuration);
 
-        // Jeśli osiągnięto docelową pozycję z tolerancją, nie trzeba czekać na pełne zamknięcie panelu
         if (Vector3.SqrMagnitude(camera.position - targetTransform.position) < Tolerance * Tolerance)
         {
             ShowUIPanel();
@@ -82,23 +80,22 @@ public class PlanetClick : MonoBehaviour
 
     private void ShowUIPanel()
     {
-        // Tutaj możesz umieścić logikę otwierania panelu lub pozostawić puste, jeśli panel ma pozostać otwarty
         StartCoroutine(ClosePanelAfterDelay());
     }
 
     private IEnumerator ClosePanelAfterDelay()
     {
-        // Oczekaj przez określony czas, a następnie zamknij panel
+        // Oczekaj przez jakiś czas i zamknij panel
         yield return new WaitForSeconds(PanelCloseDelay);
 
-        // Sprawdź, czy panel UI jest nadal aktywny (unika migania przy szybkim przełączaniu)
+        // Sprawdź, czy panel UI jest nadal aktywny
         if (uiPanel != null && uiPanel.activeSelf)
         {
             uiPanel.SetActive(false);
         }    
     }
 
-    // Metoda wywoływana po kliknięciu przycisku "Close" w BriefInfoPanel
+    // Metoda wywoływana po kliknięciu przycisku "X" w BriefInfoPanel
     public void OnCloseBriefInfoButtonClick()
     {
         // Zatrzymaj skrypt

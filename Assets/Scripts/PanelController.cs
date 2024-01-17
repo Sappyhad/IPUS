@@ -27,7 +27,7 @@ public class PanelController : MonoBehaviour
         }
     }
 
-    // Metoda wywoływana po kliknięciu przycisku "Close" w BriefInfoPanel
+    // Metoda wywoływana po kliknięciu przycisku "X" w BriefInfoPanel
     public void OnCloseBriefInfoButtonClick()
     {   
         // Sprawdź, czy panel BriefInfoPanel jest przypisany

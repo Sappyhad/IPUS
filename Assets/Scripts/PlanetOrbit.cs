@@ -38,19 +38,19 @@ public class PlanetOrbit : MonoBehaviour
         orbitLine = gameObject.AddComponent<LineRenderer>();
         orbitLine.positionCount = 360;
         orbitLine.useWorldSpace = false;
-        orbitLine.widthMultiplier = lineWidth; // Grubość linii
+        orbitLine.widthMultiplier = lineWidth;
 
         // Ustawienie koloru orbity
         orbitLine.material = new Material(Shader.Find("Sprites/Default"));
         orbitLine.material.color = orbitColor;
 
-        // Inicjalizacja punktów orbity w płaszczyźnie XY
+        // Inicjalizacja punktów orbity na osiach XY
         UpdateOrbitLine();
     }
 
     void UpdateOrbitLine()
     {
-        // Aktualizacja punktów orbity w płaszczyźnie XY
+        // Aktualizacja punktów orbity na osiach XY
         for (int i = 0; i < 360; i++)
         {
             float radians = i * Mathf.Deg2Rad;

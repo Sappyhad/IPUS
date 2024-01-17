@@ -42,7 +42,6 @@ public class PlanetSearch : MonoBehaviour
             resultsText += "- " + result + "\n";
         }
 
-        // Wyświetl wyniki w UI
         searchResultsText.text = resultsText;
     }
 }

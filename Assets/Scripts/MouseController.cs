@@ -30,7 +30,7 @@ public class CameraRotation : MonoBehaviour
             RotateCamera();
         }
 
-        // Poruszaj postacią za pomocą WSAD
+        // Poruszaj się za pomocą WSAD
         MoveCharacter();
     }
 
@@ -53,7 +53,7 @@ public class CameraRotation : MonoBehaviour
 
     void MoveCharacter()
     {
-        // Poruszaj postacią tylko wtedy, gdy nie obracasz kamery
+        // Poruszaj postacią tylko wtedy, gdy nie obracam kamery
         if (!isRotating)
         {
             float horizontalMovement = Input.GetAxis("Horizontal");
