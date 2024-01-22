@@ -5,12 +5,13 @@ public class PlanetInfo : MonoBehaviour
 {
     public string planetName;
     public string planetInfo;
+    public bool shouldBeVisibleAtStart;
 
     void Start()
     {
-        // Inicjalizacja informacji o planecie
-        planetName = "Nazwa Planety";
-        planetInfo = "Informacje o planecie...";
+        // // Inicjalizacja informacji o planecie
+        // planetName = "Nazwa Planety";
+        // planetInfo = "Informacje o planecie...";
     }
 
     public void DisplayInformation()
