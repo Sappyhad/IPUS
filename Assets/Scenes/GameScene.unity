@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11679767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 11679768}
+  m_Layer: 0
+  m_Name: JupiterAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &11679768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11679767}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 92.49}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1089836436}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &137279042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -193,6 +224,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1610884164528438, guid: 5d1442ad8c11442988e0eca5d8af73f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 137279052}
+    - targetCorrespondingSourceObject: {fileID: 1610884164528438, guid: 5d1442ad8c11442988e0eca5d8af73f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 137279055}
   m_SourcePrefab: {fileID: 100100000, guid: 5d1442ad8c11442988e0eca5d8af73f0, type: 3}
 --- !u!4 &137279043 stripped
 Transform:
@@ -217,8 +251,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Neptune
-  planetInfo: 
-  shouldBeVisibleAtStart: 0
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: Neptune, the eighth and farthest planet from the Sun, is another gas
+    giant in our solar system. Known for its vibrant blue coloration due to methane
+    in its atmosphere, Neptune's dynamic weather patterns and powerful storms make
+    it a captivating subject of study.
+  BigInfo: "Neptune, the outermost gas giant in our solar system, holds a position
+    as the eighth and farthest planet from the Sun. With a diameter of approximately
+    49,244 kilometers (30,598 miles), Neptune is slightly smaller than Uranus but
+    larger than Earth. Its distinctive blue coloration is attributed to the presence
+    of methane in its atmosphere, which absorbs red light and reflects blue wavelengths.\L
+    Neptune's atmosphere, composed primarily of hydrogen and helium, features dynamic
+    weather patterns and powerful storms. The Great Dark Spot, a massive storm system
+    similar to Jupiter's Great Red Spot, was observed by the Voyager 2 spacecraft
+    during its flyby in 1989. The presence of high-speed winds and other atmospheric
+    phenomena adds to Neptune's status as a dynamic and ever-changing world.\L Neptune
+    has a faint ring system, discovered in 1984, consisting of dark particles. The
+    rings are named after astronomers involved in the study of the planet. Despite
+    their faintness, they provide additional insights into the planetary dynamics
+    of Neptune.\L The moon Triton, Neptune's largest moon, is a unique object in
+    the solar system. Triton orbits Neptune in a retrograde motion, suggesting a
+    capture from the Kuiper Belt, and features geysers erupting nitrogen gas. These
+    geysers contribute to a thin atmosphere around Triton.\L Neptune, with its distant
+    and mysterious nature, continues to be a target for scientific exploration, offering
+    valuable data about the outer reaches of our solar system. "
+  List:
+  - "Mass: 1,02413\xD710^26 kg"
+  - 'Diameter: 49,244 kilometers (30,598 miles).'
+  - 'Composition of Elements: primarily hydrogen and helium, with methane.'
+  - 'Structure: gas giant.'
+  - 'Distance from the Sun: approximately 4.5 billion kilometers (2.8 billion miles).'
+  - 'Temperature: about -218 degrees Celsius (-360 degrees Fahrenheit).'
+  - 'Gravity: 11.15 m/s^2'
+  - 'Orbital Period: 165 Earth years.'
+  - 'Rotation Period: about 16.1 hours.'
+  - 'Known Satellites: 14 confirmed moons.'
+  SmallList:
+  - "Mass: 1,02413\xD710^26 kg"
+  - 'Diameter: 49,244 kilometers (30,598 miles).'
+  - 'Composition of Elements: primarily hydrogen and helium, with methane.'
+  - 'Structure: gas giant.'
+  - 'Distance from the Sun: approximately 4.5 billion kilometers (2.8 billion miles).'
+  - 'Gravity: 11.15 m/s^2'
 --- !u!114 &137279052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +307,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 10
+--- !u!114 &137279055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137279044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 2077244512}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
 --- !u!1 &145329967
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +407,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2129467022}
   - {fileID: 992282782}
   m_Father: {fileID: 145329968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -574,6 +678,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1733945558841920, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
       insertIndex: -1
       addedObject: {fileID: 256709539}
+    - targetCorrespondingSourceObject: {fileID: 1733945558841920, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 256709542}
   m_SourcePrefab: {fileID: 100100000, guid: 300f80108a63f48618cb4a1c8b8c1e86, type: 3}
 --- !u!4 &256709530 stripped
 Transform:
@@ -598,8 +705,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Earth
-  planetInfo: 
-  shouldBeVisibleAtStart: 0
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: 'Earth, the third planet from the Sun, is our home and the only known
+    celestial body to support life. With a diverse climate, abundant water, and a
+    dynamic atmosphere, Earth is a unique and precious oasis in the vastness of space. '
+  BigInfo: "Earth, the third planet from the Sun, holds a special place in the cosmos
+    as the only known celestial body to harbor life. With a diameter of approximately
+    12,742 kilometers (7,918 miles), Earth is characterized by its diverse ecosystems,
+    vast oceans, and a dynamic atmosphere that sustains a delicate balance of temperature
+    and conditions conducive to life. The planet's surface features continents, mountains,
+    and oceans, shaped by a complex interplay of geological processes and weathering.
+    Earth's atmosphere, predominantly composed of nitrogen and oxygen, supports a
+    rich tapestry of life, with a myriad of species inhabiting various environments.
+    The presence of liquid water, a stable climate, and a protective magnetic field
+    are crucial factors that make Earth a haven for life as we know it.\L Earth's
+    rotation on its axis gives rise to day and night, while its orbit around the
+    Sun defines the length of a year. The axial tilt contributes to the changing
+    seasons, influencing climate patterns across the globe. The Moon, Earth's only
+    natural satellite, plays a role in tides and has influenced cultural and scientific
+    endeavors throughout human history.\L While Earth represents a unique and precious
+    oasis in the cosmos, the challenges of climate change and environmental sustainability
+    highlight the importance of responsible stewardship of our planet."
+  List:
+  - "Mass: 5,98\xD710^24 kg"
+  - 'Diameter: 12,742 kilometers (7,918 miles)'
+  - 'Composition of Elements: primarily nitrogen and oxygen'
+  - 'Structure: rocky with a diverse atmosphere, abundant water'
+  - 'Distance from the Sun: approximately 149.6 million kilometers (93 million miles)'
+  - 'Temperature: varies, with an average surface temperature of about 15 degrees
+    Celsius (59 degrees Fahrenheit)'
+  - 'Gravity: 9.81 m/s^2'
+  - 'Orbital Period: 365.25 days'
+  - 'Rotation Period: about 24 hours'
+  - 'Known Satellites: Moon'
+  - '5. Potential for Life:  100%'
+  SmallList:
+  - "Mass: 5,98\xD710^24 kg"
+  - 'Diameter: 12,742 kilometers (7,918 miles)'
+  - 'Composition of Elements: primarily nitrogen and oxygen'
+  - 'Structure: rocky with a diverse atmosphere, abundant water'
+  - 'Distance from the Sun: approximately 149.6 million kilometers (93 million miles)'
+  - 'Gravity: 9.81 m/s^2'
 --- !u!114 &256709539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +760,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 10
+--- !u!114 &256709542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256709531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 1224345235}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
+--- !u!1 &289433385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 289433386}
+  m_Layer: 5
+  m_Name: MainWindow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &289433386
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289433385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.601, y: 1.601, z: 1.601}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1083470555}
+  - {fileID: 1528144645}
+  m_Father: {fileID: 1813968822}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.5, y: 411}
+  m_SizeDelta: {x: 1203.3088, y: 45.55455}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &312968205
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +856,7 @@ Transform:
   m_Children:
   - {fileID: 145329968}
   - {fileID: 835255747}
+  - {fileID: 1192355107}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &323505380
@@ -680,9 +893,9 @@ RectTransform:
   - {fileID: 562424610}
   m_Father: {fileID: 1127960799}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -571.8, y: 282.4}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 36.200012, y: -26.600006}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &323505382
@@ -753,9 +966,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1946680587}
-        m_TargetAssemblyTypeName: PlanetClick, Assembly-CSharp
-        m_MethodName: OnCloseBriefInfoButtonClick
+      - m_Target: {fileID: 1547588637}
+        m_TargetAssemblyTypeName: CloseBriefButton, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -813,7 +1026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 328764406}
   m_Layer: 5
-  m_Name: InfoBrief
+  m_Name: InfoFull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -930,6 +1143,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1288793558353234, guid: 1818e1a170ef94c3aacee2ba50057521, type: 3}
       insertIndex: -1
       addedObject: {fileID: 437541068}
+    - targetCorrespondingSourceObject: {fileID: 1288793558353234, guid: 1818e1a170ef94c3aacee2ba50057521, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 437541071}
   m_SourcePrefab: {fileID: 100100000, guid: 1818e1a170ef94c3aacee2ba50057521, type: 3}
 --- !u!4 &437541059 stripped
 Transform:
@@ -954,8 +1170,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Mars
-  planetInfo: 
-  shouldBeVisibleAtStart: 0
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: 'Mars, the fourth planet from the Sun, is a dusty, cold desert world
+    with a thin atmosphere. Known as the "Red Planet" for its iron-rich surface,
+    Mars has been a focal point of exploration and speculation about the possibility
+    of past or present life. '
+  BigInfo: "Mars, often referred to as the \"Red Planet,\" is the fourth planet from
+    the Sun and represents a captivating world with a history of exploration and
+    scientific curiosity. With a diameter of approximately 6,779 kilometers (4,212
+    miles), Mars is smaller than Earth but stands out for its unique surface features
+    and the presence of iron-rich dust that gives it a reddish hue.\L Mars has a
+    thin atmosphere, composed mainly of carbon dioxide, with traces of nitrogen and
+    argon. Surface temperatures on Mars can vary significantly, ranging from about
+    -87 degrees Celsius (-125 degrees Fahrenheit) at the poles to a more temperate
+    -5 degrees Celsius (23 degrees Fahrenheit) near the equator. The planet's surface
+    is marked by expansive deserts, towering volcanoes, and a massive canyon system
+    known as Valles Marineris.\L The search for signs of past or present life on
+    Mars has been a central focus of exploration missions. Rovers like Spirit, Opportunity,
+    and Curiosity have provided valuable data about Martian geology, climate, and
+    the potential habitability of the planet. Recent missions, such as the Mars Perseverance
+    Rover, aim to explore ancient lakebeds and search for evidence of microbial life.\L
+    Mars also has two small moons, Phobos and Deimos, which have been subjects of
+    interest and study. As humanity looks toward future crewed missions to Mars,
+    this enigmatic planet continues to fuel our curiosity about the potential for
+    life beyond Earth. "
+  List:
+  - "Mass: 6,4171\xD710^23 kg"
+  - 'Diameter: 6,779 kilometers (4,212 miles).'
+  - 'Composition of Elements: primarily carbon dioxide with traces of nitrogen and
+    argon.'
+  - 'Structure: rocky with a thin atmosphere.'
+  - 'Distance from the Sun: approximately 227.9 million kilometers (141.6 million
+    miles).'
+  - 'Temperature: varies, with extremes from about -87 degrees Celsius (-125 degrees
+    Fahrenheit) to -5 degrees Celsius (23 degrees Fahrenheit).'
+  - 'Gravity: 3.72076 m/s^2'
+  - 'Orbital Period: 687 Earth days.'
+  - 'Rotation Period: about 24.6 hours.'
+  - 'Known Satellites: Phobos and Deimos.'
+  SmallList:
+  - "Mass: 6,4171\xD710^23 kg"
+  - 'Diameter: 6,779 kilometers (4,212 miles).'
+  - 'Composition of Elements: primarily carbon dioxide with traces of nitrogen and
+    argon.'
+  - 'Structure: rocky with a thin atmosphere.'
+  - 'Distance from the Sun: approximately 227.9 million kilometers (141.6 million
+    miles).'
+  - 'Gravity: 3.72076 m/s^2'
 --- !u!114 &437541068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,6 +1231,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 10
+--- !u!114 &437541071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437541060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 842196560}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
 --- !u!1 &449879178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,10 +1307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1071,6 +1361,171 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &482681248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 482681249}
+  m_Layer: 0
+  m_Name: VenusAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &482681249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482681248}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.39, y: 0, z: 31.28}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1868899798}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &497459125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 497459126}
+  - component: {fileID: 497459128}
+  - component: {fileID: 497459127}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &497459126
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497459125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1912985225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 116.4, y: -10.299999}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &497459127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497459125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Game Version 1.0 (alpha)
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 2
+  m_fontSizeBase: 2
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &497459128
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497459125}
+  m_CullTransparentMesh: 1
 --- !u!1 &545007687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,7 +1538,7 @@ GameObject:
   - component: {fileID: 545007690}
   - component: {fileID: 545007689}
   m_Layer: 5
-  m_Name: SmallInfo
+  m_Name: BigInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1128,28 +1583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Jupiter, the largest planet in our Solar System, stands as a captivating
-    celestial giant that has long captured the imagination of astronomers and space
-    enthusiasts alike. With a staggering mass that surpasses the combined total of
-    all the other planets, moons, asteroids, and comets in the Solar System, Jupiter
-    exerts a gravitational dominance that significantly influences the dynamics of
-    the entire planetary ensemble. Its distinctive feature, the Great Red Spot, is
-    an enormous storm that has been raging for at least 350 years, presenting an
-    enduring mystery for scientists.\L\nJupiter's atmosphere, primarily composed
-    of hydrogen and helium, showcases intricate cloud patterns organized into colorful
-    bands that encircle the planet. These bands are a testament to the turbulent
-    and dynamic nature of Jupiter's atmosphere, fueled by powerful jet streams and
-    storms. The Great Red Spot, a massive anticyclonic storm, represents a climatic
-    phenomenon that persists over centuries, challenging our understanding of planetary
-    weather systems.\L\nBeyond its atmospheric wonders, Jupiter's diverse moon system,
-    including the four largest Galilean moons\u2014Io, Europa, Ganymede, and Callisto\u2014adds
-    another layer of complexity to its cosmic profile. These moons, with their unique
-    characteristics, provide additional avenues for scientific exploration. Europa,
-    for instance, with its subsurface ocean beneath an icy crust, is a tantalizing
-    target in the search for potential extraterrestrial life.\L\nIn essence, Jupiter
-    stands not only as a celestial behemoth but also as a cosmic laboratory, offering
-    a wealth of phenomena to deepen our comprehension of planetary processes and
-    the broader mysteries of the universe."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1359,6 +1793,140 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562424609}
+  m_CullTransparentMesh: 1
+--- !u!1 &565508406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565508407}
+  - component: {fileID: 565508409}
+  - component: {fileID: 565508408}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &565508407
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565508406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1877716680}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &565508408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565508406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: SETTINGS
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4292598747
+  m_fontColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &565508409
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565508406}
   m_CullTransparentMesh: 1
 --- !u!1 &589503918
 GameObject:
@@ -1584,6 +2152,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1066320961419670, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
       insertIndex: -1
       addedObject: {fileID: 593481701}
+    - targetCorrespondingSourceObject: {fileID: 1066320961419670, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 593481706}
   m_SourcePrefab: {fileID: 100100000, guid: ec1861462fc1b46f1a1c1c3c0f1f7f15, type: 3}
 --- !u!4 &593481699 stripped
 Transform:
@@ -1608,8 +2179,76 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Sun
-  planetInfo: 
-  shouldBeVisibleAtStart: 0
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: he Sun, a G-type main-sequence star, is the center of our solar system
+    and the primary source of light and energy. Its complex magnetic activity influences
+    space weather and has a profound impact on the planets and other objects in our
+    solar system.
+  BigInfo: The Sun, our radiant and life-sustaining star, serves as the luminous
+    heart of our solar system. With a diameter of approximately 1.4 million kilometers
+    (870,000 miles), the Sun's immense gravity governs the orbits of planets, asteroids,
+    comets, and other celestial bodies within its gravitational embrace. Composed
+    mainly of hydrogen and helium, the Sun undergoes a continuous process of nuclear
+    fusion in its core, converting hydrogen into helium and releasing vast amounts
+    of energy in the form of light and heat. This energy sustains life on Earth and
+    drives the dynamics of the entire solar system.  The Sun's atmosphere, consisting
+    of the photosphere, chromosphere, and corona, exhibits fascinating phenomena
+    such as sunspots, solar flares, and prominences. These features result from the
+    Sun's complex magnetic activity, which follows an 11-year solar cycle. The study
+    of solar activity is crucial for understanding space weather, as solar flares
+    and coronal mass ejections can impact satellites, power grids, and communication
+    systems on Earth.  Space missions, including the Solar and Heliospheric Observatory
+    (SOHO) and the Solar Dynamics Observatory (SDO), continuously monitor the Sun,
+    providing valuable data to unravel the mysteries of solar physics. The Sun, as
+    a typical G-type star, offers astronomers a close-up view of stellar processes,
+    contributing to our broader understanding of the life cycles of stars throughout
+    the universe.
+  List:
+  - 'Mass: 1,9891x10^33 kg (332,958 mas Ziemi)'
+  - 'Diameter: Approximately 1.4 million kilometers (870,000 miles).'
+  - 'Composition of Elements: Mainly hydrogen and helium.'
+  - 'Structure: G-type main-sequence star.'
+  - 'Temperature: About 15 million degrees Celsius (27 million degrees Fahrenheit)
+    in the core.'
+  - 'Gravity: Approximately 274 m/s^2 at the surface.'
+  - 'Surface Features: Sunspots, solar flares, prominences.'
+  - 'Solar Cycle: Approximately 11 years.'
+  - 'Notable Missions: SOHO, SDO.'
+  SmallList:
+  - 'Mass: 1,9891x10^33 kg (332,958 mas Ziemi)'
+  - 'Diameter: Approximately 1.4 million kilometers (870,000 miles).'
+  - 'Composition of Elements: Mainly hydrogen and helium.'
+  - 'Structure: G-type main-sequence star.'
+  - 'Gravity: Approximately 274 m/s^2 at the surface.'
+--- !u!114 &593481706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593481700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 2105496669}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
 --- !u!1001 &606613592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1692,6 +2331,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1647581975099426, guid: 835acc1a9ebe24c0fa3854c99346f9cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 606613602}
+    - targetCorrespondingSourceObject: {fileID: 1647581975099426, guid: 835acc1a9ebe24c0fa3854c99346f9cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 606613605}
   m_SourcePrefab: {fileID: 100100000, guid: 835acc1a9ebe24c0fa3854c99346f9cd, type: 3}
 --- !u!4 &606613593 stripped
 Transform:
@@ -1716,8 +2358,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Venus
-  planetInfo: 
-  shouldBeVisibleAtStart: 0
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: Venus, the second planet from the Sun, is a scorching, inhospitable
+    world with a thick atmosphere of sulfuric acid clouds. Its runaway greenhouse
+    effect makes it one of the hottest planets in our solar system.
+  BigInfo: "Venus, often referred to as Earth's \"sister planet\" due to its similar
+    size, yet stands in stark contrast with its inhospitable conditions. The second
+    planet from the Sun, Venus boasts a thick atmosphere primarily composed of carbon
+    dioxide with clouds of sulfuric acid, creating a runaway greenhouse effect. This
+    effect traps heat, resulting in surface temperatures that can exceed 460 degrees
+    Celsius (860 degrees Fahrenheit), making it the hottest planet in our solar system.\L
+    Despite its harsh environment, Venus has captivated the attention of astronomers
+    and planetary scientists. The planet's surface is marked by vast plains, highland
+    regions, and thousands of volcanic structures. Magellan, a NASA spacecraft, provided
+    detailed radar maps of the planet's surface, revealing features shaped by volcanic
+    activity and tectonic forces.\L Venus has a slow retrograde rotation, meaning
+    it rotates on its axis in the opposite direction to its orbit around the Sun.
+    A day on Venus (one full rotation) is longer than its year (one orbit around
+    the Sun). The planet's dense atmosphere prevents direct observations of its surface
+    from space, necessitating the use of radar and infrared imaging to study its
+    mysteries.\L While Venus lacks the conditions suitable for life as we know it,
+    its study contributes valuable insights into the dynamics of planetary atmospheres
+    and the extremes of habitability in our solar system. "
+  List:
+  - "Mass: 4,867\xD710^24 kg"
+  - 'Diameter: 12,104 kilometers (7,521 miles)'
+  - 'Composition of Elements: primarily carbon dioxide with clouds of sulfuric acid'
+  - 'Structure: rocky, thick atmosphere with a runaway greenhouse effect'
+  - 'Distance from the Sun: approximately 108.2 million kilometers (67.2 million
+    miles)'
+  - 'Temperature: exceeds 460 degrees Celsius (860 degrees Fahrenheit)'
+  - 'Gravity: 8.87 m/s^2'
+  - 'Orbital Period: 225 Earth days'
+  - 'Rotation Period: about 243 Earth days (retrograde rotation)'
+  - 'Known Satellites: None'
+  SmallList:
+  - "Mass: 4,867\xD710^24 kg"
+  - 'Diameter: 12,104 kilometers (7,521 miles)'
+  - 'Composition of Elements: primarily carbon dioxide with clouds of sulfuric acid'
+  - 'Structure: rocky, thick atmosphere with a runaway greenhouse effect'
+  - 'Distance from the Sun: approximately 108.2 million kilometers (67.2 million
+    miles)'
+  - 'Gravity: 8.87 m/s^2'
 --- !u!114 &606613602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1731,6 +2414,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 10
+--- !u!114 &606613605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606613594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 482681249}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
 --- !u!1 &675452829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,6 +2473,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2077244512}
   - {fileID: 137279043}
   m_Father: {fileID: 145329968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1862,6 +2574,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1408581670749804, guid: f9a741bb8762344c6a2a9cb4217ef728, type: 3}
       insertIndex: -1
       addedObject: {fileID: 703244460}
+    - targetCorrespondingSourceObject: {fileID: 1408581670749804, guid: f9a741bb8762344c6a2a9cb4217ef728, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 703244463}
   m_SourcePrefab: {fileID: 100100000, guid: f9a741bb8762344c6a2a9cb4217ef728, type: 3}
 --- !u!4 &703244457 stripped
 Transform:
@@ -1886,8 +2601,74 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Moon
-  planetInfo: 
-  shouldBeVisibleAtStart: 0
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: Earth's Moon is a natural satellite, shaping tides and influencing Earth's
+    axial stability. Its barren, cratered surface preserves a record of the early
+    solar system, and lunar exploration has expanded our understanding of the Moon's
+    geology.
+  BigInfo: Earth's Moon, a celestial companion in the vastness of space, plays a
+    crucial role in shaping our planet's environment. With a diameter of approximately
+    3,474 kilometers (2,159 miles), the Moon is Earth's only natural satellite and
+    the fifth-largest moon in the solar system. Its gravitational pull influences
+    Earth's tides, creating a dynamic interplay between our planet and its lunar
+    companion.  The Moon's surface, marked by vast plains, craters, and mountain
+    ranges, serves as a natural history book, preserving the impacts and geological
+    processes that occurred in the early solar system. The absence of a substantial
+    atmosphere means the Moon lacks the protective shield against space debris, leading
+    to the accumulation of impact craters over billions of years.  Human exploration
+    of the Moon, including the Apollo missions, provided valuable insights into lunar
+    geology and history. The Moon's regolith, a layer of loose, fragmented material
+    covering its surface, holds clues about the composition of the early solar system.
+    Ongoing and future lunar missions aim to further explore these mysteries, with
+    plans for human return missions and the establishment of lunar bases.  Beyond
+    its scientific significance, the Moon has cultural and poetic resonance, influencing
+    myths, art, and human imagination throughout history. As a celestial neighbor,
+    Earth's Moon continues to inspire exploration and scientific discovery.
+  List:
+  - 'Mass: 7,34x10^22 kg'
+  - 'Diameter: Approximately 3,474 kilometers (2,159 miles).'
+  - 'Composition of Elements: Primarily rock and regolith (lunar soil).'
+  - 'Structure: Natural satellite.'
+  - Distance from Earth:about 384,400 kilometers (238,855 miles).
+  - 'Gravity: Approximately 1.625 m/s^2 on the lunar surface.'
+  - 'Surface Features: Impact craters, plains, mountain ranges.'
+  - 'Exploration: Apollo missions, ongoing and planned lunar missions.'
+  - 'Cultural Significance: Inspires myths, art, and human imagination.'
+  SmallList:
+  - 'Mass: 7,34x10^22 kg'
+  - 'Diameter: Approximately 3,474 kilometers (2,159 miles).'
+  - 'Composition of Elements: Primarily rock and regolith (lunar soil).'
+  - 'Structure: Natural satellite.'
+  - Distance from Earth:about 384,400 kilometers (238,855 miles).
+--- !u!114 &703244463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703244458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 1224345235}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
 --- !u!1001 &729760128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1958,6 +2739,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1901559596380486, guid: baebbc833ecda42dd8a75966c9f62420, type: 3}
       insertIndex: -1
       addedObject: {fileID: 729760138}
+    - targetCorrespondingSourceObject: {fileID: 1901559596380486, guid: baebbc833ecda42dd8a75966c9f62420, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 729760141}
   m_SourcePrefab: {fileID: 100100000, guid: baebbc833ecda42dd8a75966c9f62420, type: 3}
 --- !u!4 &729760129 stripped
 Transform:
@@ -1982,8 +2766,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Pluto
-  planetInfo: 
-  shouldBeVisibleAtStart: 0
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: 'Pluto, once considered the ninth planet, is now classified as a dwarf
+    planet in the Kuiper Belt. With a diverse surface featuring icy plains, mountains,
+    and a thin atmosphere, Pluto remains an object of interest for exploration. '
+  BigInfo: "Pluto, a dwarf planet located in the Kuiper Belt, was formerly known
+    as the ninth planet in our solar system. With a diameter of approximately 2,377
+    kilometers (1,477 miles), Pluto is smaller than Earth's Moon. Its reclassification
+    as a dwarf planet was prompted by a reevaluation of the criteria for planetary
+    status by the International Astronomical Union in 2006.\L Pluto's surface is
+    characterized by diverse features, including icy plains, mountainous regions,
+    and a thin atmosphere composed of nitrogen, methane, and carbon monoxide. The
+    discovery of Pluto's largest moon, Charon, in 1978, provided additional insights
+    into the Pluto system. Subsequent missions, such as NASA's New Horizons, conducted
+    a flyby of Pluto in 2015, capturing high-resolution images and data about its
+    geology and atmosphere.\L The Kuiper Belt, a region of the solar system beyond
+    Neptune, is home to numerous small, icy bodies, and Pluto is considered a representative
+    member. Pluto's elliptical orbit and unique characteristics make it a valuable
+    target for scientific exploration, contributing to our understanding of the outer
+    reaches of our solar system."
+  List:
+  - "Mass: 1,303\xD710^22 kg"
+  - 'Diameter: 2,377 kilometers (1,477 miles).'
+  - 'Composition of Elements: primarily ice (nitrogen, methane, and carbon monoxide).'
+  - 'Structure: dwarf planet.'
+  - 'Distance from the Sun: varies due to its elliptical orbit, ranging from about
+    4.4 billion kilometers (2.7 billion miles) to 7.4 billion kilometers (4.6 billion
+    miles).'
+  - 'Temperature: varies, with surface temperatures around -230 degrees Celsius (-382
+    degrees Fahrenheit).'
+  - 'Gravity: approximately 0.62 m/s^2'
+  - 'Orbital Period: about 248 Earth years.'
+  - 'Rotation Period: about 6.39 Earth days.'
+  - 'Known Satellites: 5 confirmed moons, including Charon.'
+  SmallList:
+  - "Mass: 1,303\xD710^22 kg"
+  - 'Diameter: 2,377 kilometers (1,477 miles).'
+  - 'Composition of Elements: primarily ice (nitrogen, methane, and carbon monoxide).'
+  - 'Structure: dwarf planet.'
+  - 'Distance from the Sun: varies due to its elliptical orbit, ranging from about
+    4.4 billion kilometers (2.7 billion miles) to 7.4 billion kilometers (4.6 billion
+    miles).'
+  - 'Gravity: approximately 0.62 m/s^2'
 --- !u!114 &729760138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1997,6 +2822,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 10
+--- !u!114 &729760141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729760130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 1492281223}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
 --- !u!1 &737374490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,6 +2927,140 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &801957099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 801957100}
+  - component: {fileID: 801957102}
+  - component: {fileID: 801957101}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &801957100
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801957099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1962863721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &801957101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801957099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: RESUME
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4292598747
+  m_fontColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &801957102
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801957099}
+  m_CullTransparentMesh: 1
 --- !u!1 &803796947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,10 +3201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jupiter, the largest planet in our Solar System, is a fascinating astronomical
-    object. It is marked by its immense mass, a dynamic atmosphere with visible cloud
-    bands, and the iconic Great Red Spot, making it not only intriguing for astronomers
-    but also a key element in understanding planetary evolution.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2294,6 +3278,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823222237}
   m_CullTransparentMesh: 1
+--- !u!1 &824557916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 824557917}
+  - component: {fileID: 824557918}
+  m_Layer: 0
+  m_Name: PostFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &824557917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824557916}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00015702, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1192355107}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &824557918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824557916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &826156912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 826156913}
+  m_Layer: 0
+  m_Name: ABAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &826156913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826156912}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.33, y: 0, z: 71.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1833069920}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &835255746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,8 +3382,40 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2105496669}
   - {fileID: 593481699}
   m_Father: {fileID: 312968206}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &842196559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 842196560}
+  m_Layer: 0
+  m_Name: MarsAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &842196560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842196559}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.04, y: 0, z: 56.27}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1888459711}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &862206735
 GameObject:
@@ -2338,7 +3429,7 @@ GameObject:
   - component: {fileID: 862206738}
   - component: {fileID: 862206737}
   m_Layer: 5
-  m_Name: List
+  m_Name: BigList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2358,9 +3449,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 328764406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -425, y: 149}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -375, y: 149}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &862206737
@@ -2383,14 +3474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. Mass: 1.8982\xD710^27 kg.(4.1848\xD710^27 lb).\n2. Composition of Elements:
-    mostly hydrogen and helium.\n3. Structure: gas giant, lacking a solid surface.\n4.
-    Size: 139,822 kilometers (86,881 miles).\n5. Potential for Life: not considered
-    a candidate.\n6. Gravity: 24.79 m/s^2\n7. Temperature:  as low as -145 degrees
-    Celsius (-234 degrees Fahrenheit).\n8. Average orbital speed: 13.07 km/s (8.12
-    mi/s)\n9. Atmosphere: dynamic, featuring colorful bands of clouds, high-speed
-    winds, and powerful storms.\n10. Rotation period: 9.9258 h (9h 55m 33s)\n11.
-    Known satelites: 95"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2601,6 +3685,151 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867342901}
   m_CullTransparentMesh: 1
+--- !u!1 &936215694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 936215695}
+  - component: {fileID: 936215698}
+  - component: {fileID: 936215697}
+  - component: {fileID: 936215696}
+  m_Layer: 5
+  m_Name: QuitButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &936215695
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936215694}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.1522319}
+  m_LocalScale: {x: 0.2272096, y: 0.24276821, z: 0.3260378}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1101019362}
+  m_Father: {fileID: 1912985225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -0.1, y: 27.86996}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &936215696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936215694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
+    m_HighlightedColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+    m_PressedColor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+    m_SelectedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 936215697}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1813968824}
+        m_TargetAssemblyTypeName: PanelController, Assembly-CSharp
+        m_MethodName: OnQuitButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1813968823}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &936215697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936215694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &936215698
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936215694}
+  m_CullTransparentMesh: 1
 --- !u!1 &952592621
 GameObject:
   m_ObjectHideFlags: 0
@@ -2613,7 +3842,7 @@ GameObject:
   - component: {fileID: 952592624}
   - component: {fileID: 952592623}
   m_Layer: 5
-  m_Name: List
+  m_Name: SmallList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2658,11 +3887,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. Mass: 1.8982\xD710^27 kg.(4.1848\xD710^27 lb).\n2. Composition of Elements:
-    mostly hydrogen and helium.\n3. Structure: gas giant, lacking a solid surface.\n4.
-    Size: 139,822 kilometers (86,881 miles).\n5. Potential for Life: not considered
-    a candidate.\n6. Gravity: 24.79 m/s^2\n7. Temperature:  as low as -145 degrees
-    Celsius (-234 degrees Fahrenheit)."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2796,7 +4021,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jupiter
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2897,7 +4122,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976588960}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 9}
   m_LocalScale: {x: 3.4482758, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2994,6 +4219,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1014736895960144, guid: c91342f6e3afc48fd958056404ead345, type: 3}
       insertIndex: -1
       addedObject: {fileID: 992282791}
+    - targetCorrespondingSourceObject: {fileID: 1014736895960144, guid: c91342f6e3afc48fd958056404ead345, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 992282794}
   m_SourcePrefab: {fileID: 100100000, guid: c91342f6e3afc48fd958056404ead345, type: 3}
 --- !u!4 &992282782 stripped
 Transform:
@@ -3018,8 +4246,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Uranus
-  planetInfo: 
-  shouldBeVisibleAtStart: 0
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: Uranus, the seventh planet from the Sun, is an ice giant distinguished
+    by its unique sideways rotation. Its bluish-green coloration comes from the presence
+    of methane in its atmosphere. Uranus, with its faint ring system, remains a mysterious
+    and intriguing world.
+  BigInfo: "Uranus, an ice giant positioned as the seventh planet from the Sun, stands
+    out for its peculiar characteristics and enigmatic nature. With a diameter of
+    approximately 50,724 kilometers (31,518 miles), Uranus is larger than Neptune
+    but smaller than Jupiter and Saturn. What sets Uranus apart is its distinctive
+    sideways rotation, with its axis tilted at an angle of about 98 degrees relative
+    to its orbit. This extreme tilt gives the planet its unique appearance and leads
+    to extreme seasonal variations.\L The bluish-green hue of Uranus is attributed
+    to the presence of methane in its atmosphere, which absorbs red light and reflects
+    blue and green wavelengths. The composition of Uranus includes hydrogen and helium,
+    similar to the gas giants Jupiter and Saturn, but with additional components
+    such as water, ammonia, and methane.\L Uranus possesses a faint ring system,
+    first discovered in 1977 during observations of the planet's passage in front
+    of a star. The rings consist of dark particles, and the most prominent ones are
+    named after astronomers involved in the planet's study. The origin and nature
+    of Uranus's rings remain areas of ongoing research.\L The Voyager 2 spacecraft
+    provided valuable data during its flyby of Uranus in 1986, revealing details
+    about the planet's atmosphere, rings, and the presence of a diverse moon system.
+    Despite being a distant and challenging target for observation, Uranus continues
+    to intrigue astronomers and planetary scientists, offering insights into the
+    diversity of planetary architectures in our solar system."
+  List:
+  - "Mass: 8,685\xD710^25 kg"
+  - 'Diameter: 50,724 kilometers (31,518 miles).'
+  - 'Composition of Elements: primarily hydrogen and helium, with water, ammonia,
+    and methane.'
+  - 'Structure: ice giant, distinctive sideways rotation.'
+  - 'Distance from the Sun: approximately 2.9 billion kilometers (1.8 billion miles).'
+  - 'Temperature: about -224 degrees Celsius (-371 degrees Fahrenheit).'
+  - 'Gravity: 8.69 m/s^2'
+  - 'Orbital Period: 84 Earth years.'
+  - 'Rotation Period: about 17.2 hours.'
+  - 'Known Satellites: 27 confirmed moons.'
+  SmallList:
+  - "Mass: 8,685\xD710^25 kg"
+  - 'Diameter: 50,724 kilometers (31,518 miles).'
+  - 'Composition of Elements: primarily hydrogen and helium, with water, ammonia,
+    and methane.'
+  - 'Structure: ice giant, distinctive sideways rotation.'
+  - 'Distance from the Sun: approximately 2.9 billion kilometers (1.8 billion miles).'
+  - 'Gravity: 8.69 m/s^2'
 --- !u!114 &992282791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3033,6 +4305,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 10
+--- !u!114 &992282794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992282783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 2129467022}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
 --- !u!1 &1033859565
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,16 +4468,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038136193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 9}
   m_LocalScale: {x: 3.55, y: 1.1, z: 1.4773}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 867342902}
   m_Father: {fileID: 2108772818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -244}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 65}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1038136195
@@ -3286,6 +4586,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038136193}
   m_CullTransparentMesh: 1
+--- !u!1 &1046673819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1046673820}
+  m_Layer: 0
+  m_Name: MercuryAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1046673820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046673819}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3, y: 0, z: 21.82}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1358323671}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1046736648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4620931210112870, guid: ab152f61198d54532ae39108e616ff59, type: 3}
@@ -3304,8 +4635,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Mercury
-  planetInfo: 
-  shouldBeVisibleAtStart: 0
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: Mercury, the closest planet to the Sun, is a small, rocky world known
+    for its extreme temperature variations. Despite its proximity to the Sun, Mercury
+    possesses a unique set of characteristics that intrigue scientists and provide
+    insights into the early formation of our solar system.
+  BigInfo: "Mercury, the innermost planet in our Solar System, stands as a testament
+    to the harsh realities of proximity to the Sun. This small, rocky world, devoid
+    of a substantial atmosphere, experiences extreme temperature swings, with surface
+    temperatures ranging from scorching highs to frigid lows. Despite its inhospitable
+    conditions, Mercury offers valuable clues about the early stages of planetary
+    evolution.\L With a diameter of approximately 4,880 kilometers (3,032 miles),
+    Mercury is only slightly larger than Earth's Moon. Its lack of a significant
+    atmosphere contributes to a surface marked by craters and basins, evidence of
+    a tumultuous history shaped by impacts from space debris. The planet's slow rotation,
+    taking about 58.6 Earth days for a single rotation, contrasts sharply with its
+    rapid orbit around the Sun, completing one orbit in just 88 Earth days.\L Mercury's
+    composition primarily consists of rocky material, including metals like iron
+    and nickel. The absence of a substantial atmosphere means that the planet lacks
+    the protective shield against solar radiation, making its surface conditions
+    inhospitable for the existence of liquid water or life as we know it.\L Despite
+    its challenges for exploration, missions such as MESSENGER have provided valuable
+    data about Mercury's geology, magnetic field, and surface composition. These
+    findings contribute to our broader understanding of the formation and evolution
+    of rocky planets in the solar system. "
+  List:
+  - "Mass: 3,3\xD710^23 kg"
+  - 'Diameter: 4,880 kilometers (3,032 miles)'
+  - 'Composition of Elements: rocky, with metals like iron and nickel'
+  - 'Structure: rocky, lacking a substantial atmosphere'
+  - 'Distance from the Sun: approximately 57.9 million kilometers (36 million miles)'
+  - 'Temperature: ranges from about 430 degrees Celsius (800 degrees Fahrenheit)
+    on the daytime side to -180 degrees Celsius (-290 degrees Fahrenheit) on the
+    nighttime side.'
+  - 'Gravity: 3.7 m/s^2'
+  - 'Orbital Period: 88 Earth days.'
+  - 'Rotation Period: about 58.6 Earth days.'
+  - 'Known Satellites: None.'
+  SmallList:
+  - "Mass: 3,3\xD710^23 kg"
+  - 'Diameter: 4,880 kilometers (3,032 miles)'
+  - 'Composition of Elements: rocky, with metals like iron and nickel'
+  - 'Structure: rocky, lacking a substantial atmosphere'
+  - 'Distance from the Sun: approximately 57.9 million kilometers (36 million miles)'
+  - 'Gravity: 3.7 m/s^2'
 --- !u!114 &1046736657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3319,6 +4693,179 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 10
+--- !u!114 &1046736660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361979033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 1046673820}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
+--- !u!1 &1083470554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083470555}
+  - component: {fileID: 1083470558}
+  - component: {fileID: 1083470557}
+  - component: {fileID: 1083470556}
+  m_Layer: 5
+  m_Name: PauseMenuButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1083470555
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083470554}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3280876, y: 1.1023743, z: 1.1023743}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1665815349}
+  m_Father: {fileID: 289433386}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 36.5, y: -23}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1083470556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083470554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1083470557}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1813968824}
+        m_TargetAssemblyTypeName: PanelController, Assembly-CSharp
+        m_MethodName: OnPauseMenuButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1813968823}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1083470557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083470554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 919f23298cace984192858f4ff8a9101, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1083470558
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083470554}
+  m_CullTransparentMesh: 1
 --- !u!1 &1086933163
 GameObject:
   m_ObjectHideFlags: 0
@@ -3351,9 +4898,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 328764406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -439, y: 261}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -389, y: 211}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086933165
@@ -3376,9 +4923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Statistics &
-
-    More'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3486,6 +5031,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 11679768}
   - {fileID: 1946680568}
   m_Father: {fileID: 145329968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3519,6 +5065,274 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 5
+--- !u!1 &1101019361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101019362}
+  - component: {fileID: 1101019364}
+  - component: {fileID: 1101019363}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1101019362
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101019361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 936215695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1101019363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101019361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: QUIT
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4292598747
+  m_fontColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1101019364
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101019361}
+  m_CullTransparentMesh: 1
+--- !u!1 &1103227397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1103227398}
+  - component: {fileID: 1103227400}
+  - component: {fileID: 1103227399}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1103227398
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103227397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.42836022, y: 0.42836022, z: 0.42836022}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1912985225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -30}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1103227399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103227397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: MENU
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1103227400
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103227397}
+  m_CullTransparentMesh: 1
 --- !u!1 &1127960798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,6 +5344,7 @@ GameObject:
   - component: {fileID: 1127960799}
   - component: {fileID: 1127960802}
   - component: {fileID: 1127960801}
+  - component: {fileID: 1127960803}
   m_Layer: 5
   m_Name: AllInfoPanel
   m_TagString: Untagged
@@ -3546,17 +5361,17 @@ RectTransform:
   m_GameObject: {fileID: 1127960798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5822556, y: 1.65, z: 1.5822556}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 323505381}
   - {fileID: 328764406}
   m_Father: {fileID: 1813968822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: 1115, y: 518}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -6}
+  m_SizeDelta: {x: 1215, y: 618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127960801
 MonoBehaviour:
@@ -3596,6 +5411,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127960798}
   m_CullTransparentMesh: 1
+--- !u!114 &1127960803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127960798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c446facdb3038644e8c1306c8820ab89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 1390919680}
+  sideTitleText: {fileID: 1086933165}
+  dotsText: {fileID: 1651200485}
+  smallInfoText: {fileID: 823222239}
+  bigListText: {fileID: 862206737}
+  SmallList: {fileID: 952592623}
+  bigInfoText: {fileID: 545007689}
 --- !u!850595691 &1182094114
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -3660,6 +5494,72 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
+--- !u!1 &1192355106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1192355107}
+  m_Layer: 0
+  m_Name: BLACK_HOLE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1192355107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192355106}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 44857, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 824557917}
+  - {fileID: 1468812961}
+  - {fileID: 2133548515}
+  - {fileID: 1284840856}
+  m_Father: {fileID: 312968206}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1224345234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1224345235}
+  m_Layer: 0
+  m_Name: EarthAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1224345235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224345234}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.052335896, y: -0, z: -0, w: 0.9986295}
+  m_LocalPosition: {x: 4.65, y: 0, z: 44.06}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1823789987}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1248717595
 GameObject:
   m_ObjectHideFlags: 0
@@ -3712,6 +5612,199 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1001 &1284840855
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1192355107}
+    m_Modifications:
+    - target: {fileID: 1529044423612433880, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_Name
+      value: blackhole
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 99.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 99.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 99.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838842418924617203, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1529044423612433880, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1284840858}
+    - targetCorrespondingSourceObject: {fileID: 1529044423612433880, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1284840860}
+    - targetCorrespondingSourceObject: {fileID: 1529044423612433880, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1284840859}
+  m_SourcePrefab: {fileID: 100100000, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+--- !u!4 &1284840856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2469603862081328619, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+  m_PrefabInstance: {fileID: 1284840855}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1284840857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1529044423612433880, guid: 8a660f331a488b748968bd1a842937d3, type: 3}
+  m_PrefabInstance: {fileID: 1284840855}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1284840858
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284840857}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2a325a8c28613a54097bf2bbd522db13, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1284840859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284840857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 2133548515}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
+--- !u!114 &1284840860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284840857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a85afe50daa734468d65fed96de736c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetName: Saggitarius A*
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: Sagittarius A* is a supermassive black hole located at the center of
+    our Milky Way galaxy. Its immense gravitational pull governs the motion of stars
+    in its vicinity, offering a unique opportunity to study the effects of extreme
+    gravity.
+  BigInfo: "Sagittarius A*, a supermassive black hole residing at the heart of our
+    Milky Way galaxy, is a celestial enigma of extraordinary proportions. With a
+    mass equivalent to about 4 million times that of our Sun, Sagittarius A* exerts
+    a gravitational influence so immense that it governs the orbital dynamics of
+    stars within its vicinity.\L The existence of Sagittarius A* was inferred through
+    the observation of stellar orbits around an invisible, massive object. Advancements
+    in observational techniques, including radio and infrared astronomy, have allowed
+    astronomers to peer through the obscuring dust and gas of the galactic center,
+    confirming the presence of this supermassive black hole.\L Sagittarius A* presents
+    a unique laboratory for testing the predictions of Einstein's general theory
+    of relativity in the extreme gravitational environment near a black hole. The
+    Event Horizon Telescope collaboration, through the observation of the surrounding
+    accretion disk, aims to capture the first-ever image of a black hole, providing
+    further insights into the nature of these cosmic entities.\L The study of Sagittarius
+    A* contributes to our understanding of the formation and evolution of galaxies,
+    as supermassive black holes are thought to play a crucial role in shaping the
+    structure and dynamics of galactic centers."
+  List:
+  - 'Mass: Approximately 4 million times the mass of the Sun.'
+  - 'Composition: Black hole, characterized by extreme gravitational forces.'
+  - 'Location: Milky Way Galactic center, Sagittarius constellation.'
+  - 'Observable Features: Effects on surrounding stars, accretion disk.'
+  - 'Study Focus: Testing general relativity, understanding galactic center dynamics.'
+  SmallList:
+  - 'Mass: Approximately 4 million times the mass of the Sun.'
+  - 'Composition: Black hole, characterized by extreme gravitational forces.'
+  - 'Location: Milky Way Galactic center, Sagittarius constellation.'
+  - 'Observable Features: Effects on surrounding stars, accretion disk.'
+  - 'Study Focus: Testing general relativity, understanding galactic center dynamics.'
 --- !u!1 &1328398462
 GameObject:
   m_ObjectHideFlags: 0
@@ -3854,6 +5947,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1856687845478954, guid: ab152f61198d54532ae39108e616ff59, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1046736657}
+    - targetCorrespondingSourceObject: {fileID: 1856687845478954, guid: ab152f61198d54532ae39108e616ff59, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1046736660}
   m_SourcePrefab: {fileID: 100100000, guid: ab152f61198d54532ae39108e616ff59, type: 3}
 --- !u!1 &1340874794
 GameObject:
@@ -4023,9 +6119,9 @@ RectTransform:
   - {fileID: 1248717596}
   m_Father: {fileID: 1846023194}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33.91, y: 46.1}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -16.09, y: -3.9000015}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343649110
@@ -4233,7 +6329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: . . .
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4341,6 +6437,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1046673820}
   - {fileID: 1046736648}
   m_Father: {fileID: 145329968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4386,7 +6483,7 @@ GameObject:
   - component: {fileID: 1390919681}
   - component: {fileID: 1390919680}
   m_Layer: 5
-  m_Name: Title
+  m_Name: Title2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4406,9 +6503,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 328764406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 158, y: 261}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 158, y: 211}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1390919680
@@ -4431,7 +6528,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jupiter
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4508,6 +6605,131 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390919678}
   m_CullTransparentMesh: 1
+--- !u!1 &1468812960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468812961}
+  - component: {fileID: 1468812962}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468812961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468812960}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.008726558, z: -0, w: 0.999962}
+  m_LocalPosition: {x: 29.999844, y: 0, z: 1688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1192355107}
+  m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
+--- !u!108 &1468812962
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468812960}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 0
+  m_Range: 3341.08
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.802082
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: 2
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.005
+    m_NormalBias: 0.1
+    m_NearPlane: 5
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 1.46939e-39, z: 0, w: 1.469396e-39}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!1 &1492281222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492281223}
+  m_Layer: 0
+  m_Name: PlutoAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1492281223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492281222}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.7, y: 0, z: 179.24}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2083258733}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1509747588
 GameObject:
   m_ObjectHideFlags: 0
@@ -4736,6 +6958,151 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
+--- !u!1 &1528144644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528144645}
+  - component: {fileID: 1528144648}
+  - component: {fileID: 1528144647}
+  - component: {fileID: 1528144646}
+  m_Layer: 5
+  m_Name: SearchButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1528144645
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528144644}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3280876, y: 1.1023743, z: 1.1023743}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1661358202}
+  m_Father: {fileID: 289433386}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -36.5, y: -23}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1528144646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528144644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1528144647}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1813968824}
+        m_TargetAssemblyTypeName: PanelController, Assembly-CSharp
+        m_MethodName: OnSearchButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1813968823}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1528144647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528144644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 61c7d844f7fecb445a39ca9d6b8abca7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1528144648
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528144644}
+  m_CullTransparentMesh: 1
 --- !u!1 &1547588632
 GameObject:
   m_ObjectHideFlags: 0
@@ -4748,6 +7115,7 @@ GameObject:
   - component: {fileID: 1547588636}
   - component: {fileID: 1547588635}
   - component: {fileID: 1547588634}
+  - component: {fileID: 1547588637}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -4763,16 +7131,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547588632}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 9}
   m_LocalScale: {x: 0.82508415, y: 0.8683988, z: 0.8683988}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1593797814}
   m_Father: {fileID: 2108772818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -499.31024, y: 282.4}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.68976, y: -26.600006}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1547588634
@@ -4821,7 +7189,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1813968824}
         m_TargetAssemblyTypeName: PanelController, Assembly-CSharp
-        m_MethodName: OnCloseBriefInfoButtonClick
+        m_MethodName: OnCloseBriefInfoButtonClickFromPlanetClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4843,9 +7211,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1946680587}
-        m_TargetAssemblyTypeName: PlanetClick, Assembly-CSharp
-        m_MethodName: OnCloseBriefInfoButtonClick
+      - m_Target: {fileID: 1547588637}
+        m_TargetAssemblyTypeName: CloseBriefButton, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4893,6 +7261,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547588632}
   m_CullTransparentMesh: 1
+--- !u!114 &1547588637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547588632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23045b96a89cc9647a3b5b262a2f243f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1593797813
 GameObject:
   m_ObjectHideFlags: 0
@@ -5039,7 +7419,7 @@ GameObject:
   - component: {fileID: 1651200486}
   - component: {fileID: 1651200485}
   m_Layer: 5
-  m_Name: Dots
+  m_Name: Dots2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5059,9 +7439,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 328764406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 159, y: 233}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 159, y: 183}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1651200485
@@ -5084,7 +7464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: . . .
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5160,6 +7540,274 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651200483}
+  m_CullTransparentMesh: 1
+--- !u!1 &1661358201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661358202}
+  - component: {fileID: 1661358204}
+  - component: {fileID: 1661358203}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1661358202
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661358201}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1528144645}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1661358203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661358201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1661358204
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661358201}
+  m_CullTransparentMesh: 1
+--- !u!1 &1665815348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1665815349}
+  - component: {fileID: 1665815351}
+  - component: {fileID: 1665815350}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1665815349
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665815348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1083470555}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1665815350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665815348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1665815351
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665815348}
   m_CullTransparentMesh: 1
 --- !u!1001 &1674817562
 PrefabInstance:
@@ -5243,6 +7891,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1123243791319946, guid: c0aedbee0212d4ba08d6e85a65854d22, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1674817566}
+    - targetCorrespondingSourceObject: {fileID: 1123243791319946, guid: c0aedbee0212d4ba08d6e85a65854d22, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1674817572}
   m_SourcePrefab: {fileID: 100100000, guid: c0aedbee0212d4ba08d6e85a65854d22, type: 3}
 --- !u!4 &1674817563 stripped
 Transform:
@@ -5267,8 +7918,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Asteroid Belt
-  planetInfo: 
-  shouldBeVisibleAtStart: 0
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: The Asteroid Belt is a region between the orbits of Mars and Jupiter,
+    populated by numerous small celestial bodies known as asteroids. These rocky
+    remnants from the early solar system offer valuable insights into planetary formation.
+  BigInfo: "The Asteroid Belt, located between the orbits of Mars and Jupiter, is
+    a vast region populated by a multitude of small celestial bodies known as asteroids.
+    These remnants from the early stages of our solar system provide a unique window
+    into the processes that shaped the formation of planets.\L The asteroids within
+    the belt vary in size, composition, and shape. They are primarily composed of
+    rock and metal, with some containing water ice and other volatile substances.
+    The largest asteroid in the belt is Ceres, which is also classified as a dwarf
+    planet due to its size and spherical shape.\L The origin of the Asteroid Belt
+    is thought to be related to the gravitational influence of Jupiter, preventing
+    the formation of a planet in the gap between Mars and Jupiter. Instead, countless
+    smaller bodies, ranging from a few meters to several hundred kilometers in diameter,
+    populate this region.\L Various space missions, such as NASA's Dawn spacecraft,
+    have visited and studied asteroids within the belt. These missions provide valuable
+    data about the composition, structure, and history of these ancient objects.
+    The study of asteroids is not only essential for understanding the early solar
+    system but also for assessing potential threats to Earth from near-Earth asteroids.\L
+    The Asteroid Belt serves as a testament to the dynamic and complex processes
+    that shaped the architecture of our solar system, offering scientists a celestial
+    laboratory for unraveling the mysteries of planetary formation."
+  List:
+  - 'Composition: Primarily rock and metal, with some containing water ice and volatile
+    substances.'
+  - 'Location: Between the orbits of Mars and Jupiter.'
+  - 'Largest Object: Ceres, a dwarf planet.'
+  - 'Size Range: From a few meters to several hundred kilometers in diameter.'
+  - 'Origin: Gravitational influence of Jupiter preventing planet formation.'
+  - 'Exploration: Studied by space missions like NASA''s Dawn spacecraft.'
+  - 'Scientific Value: Provides insights into early solar system dynamics and potential
+    Earth impact threats.'
+  SmallList:
+  - 'Composition: Primarily rock and metal, with some containing water ice and volatile
+    substances.'
+  - 'Location: Between the orbits of Mars and Jupiter.'
+  - 'Largest Object: Ceres, a dwarf planet.'
+  - 'Size Range: From a few meters to several hundred kilometers in diameter.'
 --- !u!114 &1674817569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5282,6 +7971,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 10
+--- !u!114 &1674817572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674817564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 826156913}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
 --- !u!1 &1681621938
 GameObject:
   m_ObjectHideFlags: 0
@@ -5314,10 +8031,10 @@ RectTransform:
   - {fileID: 589503922}
   m_Father: {fileID: 1846023194}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34.1, y: -4.3}
-  m_SizeDelta: {x: 21.69, y: 84.6}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -15.900002, y: -4.3}
+  m_SizeDelta: {x: 21.690002, y: 84.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681621940
 MonoBehaviour:
@@ -5376,6 +8093,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2033676473}
   - {fileID: 1780738092}
   m_Father: {fileID: 145329968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5409,6 +8127,151 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 4
+--- !u!1 &1718937931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1718937932}
+  - component: {fileID: 1718937935}
+  - component: {fileID: 1718937934}
+  - component: {fileID: 1718937933}
+  m_Layer: 5
+  m_Name: CloseButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1718937932
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718937931}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.6081479}
+  m_LocalScale: {x: -0.032552, y: -0.23302093, z: -0.25606698}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1910218279}
+  m_Father: {fileID: 1846023194}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 16.3, y: -4.2299995}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1718937933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718937931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1718937934}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1813968824}
+        m_TargetAssemblyTypeName: PanelController, Assembly-CSharp
+        m_MethodName: OnCloseSearchPanelClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1813968823}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1718937934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718937931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 919f23298cace984192858f4ff8a9101, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1718937935
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718937931}
+  m_CullTransparentMesh: 1
 --- !u!1 &1733676778
 GameObject:
   m_ObjectHideFlags: 0
@@ -5583,6 +8446,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1377197793697218, guid: b4201d402613a4464b35c805dafcca62, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1780738101}
+    - targetCorrespondingSourceObject: {fileID: 1377197793697218, guid: b4201d402613a4464b35c805dafcca62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1780738104}
   m_SourcePrefab: {fileID: 100100000, guid: b4201d402613a4464b35c805dafcca62, type: 3}
 --- !u!4 &1780738092 stripped
 Transform:
@@ -5607,8 +8473,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetName: Saturn
-  planetInfo: 
-  shouldBeVisibleAtStart: 0
+  SideTitle: Statistics & More
+  Dots: . . .
+  SmallInfo: Saturn, the sixth planet from the Sun, is a gas giant renowned for its
+    stunning ring system. These rings, composed of ice and rock particles, make Saturn
+    one of the most visually striking planets in our solar system.
+  BigInfo: "Saturn, the majestic gas giant, stands as a celestial marvel known for
+    its stunning ring system, making it one of the most captivating planets in our
+    solar system. With a diameter of approximately 116,460 kilometers (72,366 miles),
+    Saturn is the second-largest planet, surpassed only by Jupiter.\L Saturn's iconic
+    rings are composed of countless particles of ice and rock, ranging in size from
+    tiny grains to large chunks. These rings are organized into distinct bands, each
+    representing a different level of density and composition. The origin of Saturn's
+    rings remains a subject of scientific investigation, with theories suggesting
+    they may be remnants of a moon or debris from a comet or asteroid.\L The planet's
+    atmosphere, primarily composed of hydrogen and helium, displays intricate cloud
+    patterns and dynamic weather features. Saturn's hexagonal-shaped storm at its
+    north pole and a variety of atmospheric storms and jet streams contribute to
+    its atmospheric complexity. The Cassini spacecraft provided detailed observations,
+    including close-up views of the rings and the discovery of water-ice plumes erupting
+    from the moon Enceladus.\L Saturn's extensive moon system, including Titan, the
+    second-largest moon in the solar system, offers additional realms for exploration.
+    Titan, with its thick atmosphere and methane lakes, has been a particular focus
+    for scientific study. The unique characteristics of Saturn and its moons continue
+    to provide valuable insights into the formation and dynamics of planetary systems. "
+  List:
+  - "Mass: 5,68\xD710^26 kg"
+  - 'Diameter: 116,460 kilometers (72,366 miles).'
+  - 'Composition of Elements: mostly hydrogen and helium.'
+  - 'Structure: gas giant, lacking a solid surface.'
+  - 'Distance from the Sun: approximately 1.4 billion kilometers (886 million miles).'
+  - 'Temperature: about -139 degrees Celsius (-218 degrees Fahrenheit).'
+  - 'Gravity: 10.44 m/s^2'
+  - 'Orbital Period: 29.5 Earth years.'
+  - 'Rotation Period: about 10.7 hours.'
+  - 'Known Satellites: 82 confirmed moons.'
+  SmallList:
+  - "Mass: 5,68\xD710^26 kg"
+  - 'Diameter: 116,460 kilometers (72,366 miles).'
+  - 'Composition of Elements: mostly hydrogen and helium.'
+  - 'Structure: gas giant, lacking a solid surface.'
+  - 'Distance from the Sun: approximately 1.4 billion kilometers (886 million miles).'
+  - 'Gravity: 10.44 m/s^2'
 --- !u!114 &1780738101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5622,6 +8528,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 10
+--- !u!114 &1780738104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780738093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25a9810a0ff1b46ae3d715570974f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 1
+  targetTransform: {fileID: 2033676473}
+  camera: {fileID: 1033859566}
+  uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
 --- !u!1 &1813968821
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,6 +8590,8 @@ RectTransform:
   - {fileID: 2108772818}
   - {fileID: 1127960799}
   - {fileID: 1846023194}
+  - {fileID: 289433386}
+  - {fileID: 1912985225}
   m_Father: {fileID: 449879182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5693,6 +8629,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   briefInfoPanel: {fileID: 2108772817}
   allInfoPanel: {fileID: 1127960798}
+  searchPanel: {fileID: 1846023193}
+  MainWindow: {fileID: 289433385}
+  PauseMenu: {fileID: 1912985224}
+  AllInfoPanelObj: {fileID: 1127960803}
 --- !u!114 &1813968825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5708,6 +8648,20 @@ MonoBehaviour:
   searchInputField: {fileID: 1343649110}
   resultsPanel: {fileID: 1681621939}
   resultButtonPrefab: {fileID: 589503918}
+  PlanetObjects:
+  - {fileID: 361979033}
+  - {fileID: 1946680569}
+  - {fileID: 1674817564}
+  - {fileID: 1780738093}
+  - {fileID: 992282783}
+  - {fileID: 137279044}
+  - {fileID: 729760130}
+  - {fileID: 593481700}
+  - {fileID: 437541060}
+  - {fileID: 256709531}
+  - {fileID: 606613594}
+  - {fileID: 1284840857}
+  - {fileID: 703244458}
 --- !u!1 &1823789986
 GameObject:
   m_ObjectHideFlags: 0
@@ -5739,6 +8693,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1224345235}
   - {fileID: 256709530}
   m_Father: {fileID: 737374491}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5803,6 +8758,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 826156913}
   - {fileID: 1674817563}
   m_Father: {fileID: 145329968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5862,18 +8818,19 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846023193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12.13, y: 6.15, z: 5.5965}
+  m_LocalPosition: {x: 0, y: 0, z: -2.6253}
+  m_LocalScale: {x: 19.206642, y: 9.73791, z: 8.861498}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1718937932}
   - {fileID: 1681621939}
   - {fileID: 1343649109}
   m_Father: {fileID: 1813968822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1846023195
 MonoBehaviour:
@@ -5944,6 +8901,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 482681249}
   - {fileID: 606613593}
   m_Father: {fileID: 145329968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5977,6 +8935,139 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 8
+--- !u!1 &1877716679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1877716680}
+  - component: {fileID: 1877716683}
+  - component: {fileID: 1877716682}
+  - component: {fileID: 1877716681}
+  m_Layer: 5
+  m_Name: SettingsButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1877716680
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877716679}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.1522319}
+  m_LocalScale: {x: 0.2272096, y: 0.24276821, z: 0.3260378}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 565508407}
+  m_Father: {fileID: 1912985225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.1, y: -9.473015}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1877716681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877716679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
+    m_HighlightedColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+    m_PressedColor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+    m_SelectedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1877716682}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1813968823}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1877716682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877716679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1877716683
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877716679}
+  m_CullTransparentMesh: 1
 --- !u!1 &1888459710
 GameObject:
   m_ObjectHideFlags: 0
@@ -6008,6 +9099,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 842196560}
   - {fileID: 437541059}
   m_Father: {fileID: 145329968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6041,6 +9133,220 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 6
+--- !u!1 &1910218278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910218279}
+  - component: {fileID: 1910218281}
+  - component: {fileID: 1910218280}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1910218279
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910218278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.18, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1718937932}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1910218280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910218278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: X
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 26.85
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1910218281
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910218278}
+  m_CullTransparentMesh: 1
+--- !u!1 &1912985224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1912985225}
+  - component: {fileID: 1912985227}
+  - component: {fileID: 1912985226}
+  m_Layer: 5
+  m_Name: PauseMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1912985225
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912985224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10.193, y: 10.193, z: 10.193}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1962863721}
+  - {fileID: 1877716680}
+  - {fileID: 936215695}
+  - {fileID: 1103227398}
+  - {fileID: 497459126}
+  m_Father: {fileID: 1813968822}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1912985226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912985224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7079b79b7859c634a8363d284fffab45, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1912985227
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912985224}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1946680567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6110,8 +9416,204 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: BigInfo
+      value: "Jupiter, the largest planet in our Solar System, stands as a captivating
+        celestial giant that has long captured the imagination of astronomers and
+        space enthusiasts alike. With a staggering mass that surpasses the combined
+        total of all the other planets, moons, asteroids, and comets in the Solar
+        System, Jupiter exerts a gravitational dominance that significantly influences
+        the dynamics of the entire planetary ensemble. Its distinctive feature, the
+        Great Red Spot, is an enormous storm that has been raging for at least 350
+        years, presenting an enduring mystery for scientists.\L Jupiter's atmosphere,
+        primarily composed of hydrogen and helium, showcases intricate cloud patterns
+        organized into colorful bands that encircle the planet. These bands are a
+        testament to the turbulent and dynamic nature of Jupiter's atmosphere, fueled
+        by powerful jet streams and storms. The Great Red Spot, a massive anticyclonic
+        storm, represents a climatic phenomenon that persists over centuries, challenging
+        our understanding of planetary weather systems.\L Beyond its atmospheric
+        wonders, Jupiter's diverse moon system, including the four largest Galilean
+        moons\u2014Io, Europa, Ganymede, and Callisto\u2014adds another layer of
+        complexity to its cosmic profile. These moons, with their unique characteristics,
+        provide additional avenues for scientific exploration. Europa, for instance,
+        with its subsurface ocean beneath an icy crust, is a tantalizing target in
+        the search for potential extraterrestrial life.\L In essence, Jupiter stands
+        not only as a celestial behemoth but also as a cosmic laboratory, offering
+        a wealth of phenomena to deepen our comprehension of planetary processes
+        and the broader mysteries of the universe."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: bigInfo
+      value: "Jupiter, the largest planet in our Solar System, stands as a captivating
+        celestial giant that has long captured the imagination of astronomers and
+        space enthusiasts alike. With a staggering mass that surpasses the combined
+        total of all the other planets, moons, asteroids, and comets in the Solar
+        System, Jupiter exerts a gravitational dominance that significantly influences
+        the dynamics of the entire planetary ensemble. Its distinctive feature, the
+        Great Red Spot, is an enormous storm that has been raging for at least 350
+        years, presenting an enduring mystery for scientists.\L Jupiter's atmosphere,
+        primarily composed of hydrogen and helium, showcases intricate cloud patterns
+        organized into colorful bands that encircle the planet. These bands are a
+        testament to the turbulent and dynamic nature of Jupiter's atmosphere, fueled
+        by powerful jet streams and storms. The Great Red Spot, a massive anticyclonic
+        storm, represents a climatic phenomenon that persists over centuries, challenging
+        our understanding of planetary weather systems.\L Beyond its atmospheric
+        wonders, Jupiter's diverse moon system, including the four largest Galilean
+        moons\u2014Io, Europa, Ganymede, and Callisto\u2014adds another layer of
+        complexity to its cosmic profile. These moons, with their unique characteristics,
+        provide additional avenues for scientific exploration. Europa, for instance,
+        with its subsurface ocean beneath an icy crust, is a tantalizing target in
+        the search for potential extraterrestrial life.\L In essence, Jupiter stands
+        not only as a celestial behemoth but also as a cosmic laboratory, offering
+        a wealth of phenomena to deepen our comprehension of planetary processes
+        and the broader mysteries of the universe."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: SmallInfo
+      value: Jupiter, the largest planet in our Solar System, is a fascinating astronomical
+        object. It is marked by its immense mass, a dynamic atmosphere with visible
+        cloud bands, and the iconic Great Red Spot, making it not only intriguing
+        for astronomers but also a key element in understanding planetary evolution.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: smallInfo
+      value: Jupiter, the largest planet in our Solar System, is a fascinating astronomical
+        object. It is marked by its immense mass, a dynamic atmosphere with visible
+        cloud bands, and the iconic Great Red Spot, making it not only intriguing
+        for astronomers but also a key element in understanding planetary evolution.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: planetName2
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: List.Array.data[0]
+      value: "1. Mass: 1.8982\xD710^27 kg.(4.1848\xD710^27 lb)."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: List.Array.data[1]
+      value: '2. Composition of Elements: mostly hydrogen and helium.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: List.Array.data[2]
+      value: '3. Structure: gas giant, lacking a solid surface.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: List.Array.data[3]
+      value: '4. Size: 139,822 kilometers (86,881 miles).'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: List.Array.data[4]
+      value: '5. Potential for Life: not considered a candidate.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: List.Array.data[5]
+      value: '6. Gravity: 24.79 m/s^2'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: List.Array.data[6]
+      value: '7. Temperature:  as low as -145 degrees Celsius (-234 degrees Fahrenheit).'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: List.Array.data[7]
+      value: '8. Average orbital speed: 13.07 km/s (8.12 mi/s)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: List.Array.data[8]
+      value: '9. Atmosphere: dynamic, featuring colorful bands of clouds, high-speed
+        winds, and powerful storms.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: List.Array.data[9]
+      value: '10. Rotation period: 9.9258 h (9h 55m 33s)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: List.Array.data[10]
+      value: '11. Known satelites: 95'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.data[0]
+      value: "Mass: 1.8982\xD710^27 kg.(4.1848\xD710^27 lb)."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.data[1]
+      value: 'Composition of Elements: mostly hydrogen and helium.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.data[2]
+      value: 'Structure: gas giant, lacking a solid surface.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.data[3]
+      value: 'Size: 139,822 kilometers (86,881 miles).'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.data[4]
+      value: 'Potential for Life: not considered a candidate.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.data[5]
+      value: 'Gravity: 24.79 m/s^2'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.data[6]
+      value: 'Temperature:  as low as -145 degrees Celsius (-234 degrees Fahrenheit).'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.data[7]
+      value: 'Average orbital speed: 13.07 km/s (8.12 mi/s)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.data[8]
+      value: 'Atmosphere: dynamic, featuring colorful bands of clouds, high-speed
+        winds, and powerful storms.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.data[9]
+      value: 'Rotation period: 9.9258 h (9h 55m 33s)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: SmallList.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: lista.Array.data[10]
+      value: 'Known satelites: 95'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
       propertyPath: shouldBeVisibleAtStart
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: SmallList.Array.data[0]
+      value: "1. Mass: 1.8982\xD710^27 kg.(4.1848\xD710^27 lb)."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: SmallList.Array.data[1]
+      value: '2. Composition of Elements: mostly hydrogen and helium.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: SmallList.Array.data[2]
+      value: '3. Structure: gas giant, lacking a solid surface.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: SmallList.Array.data[3]
+      value: '4. Size: 139,822 kilometers (86,881 miles).'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: SmallList.Array.data[4]
+      value: '5. Potential for Life: not considered a candidate.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: SmallList.Array.data[5]
+      value: '6. Gravity: 24.79 m/s^2'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997643871380011139, guid: 7e4bfb3c6ba1d4bc4ba31d585abdae0f, type: 3}
+      propertyPath: SmallList.Array.data[6]
+      value: '7. Temperature:  as low as -145 degrees Celsius (-234 degrees Fahrenheit).'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6166,9 +9668,222 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   animationDuration: 1
-  targetTransform: {fileID: 1946680568}
+  targetTransform: {fileID: 11679768}
   camera: {fileID: 1033859566}
   uiPanel: {fileID: 2108772817}
+  Big_UI_Panel: {fileID: 1813968821}
+  briefInfoPanelPrefab: {fileID: 2108772817}
+  MainWindow: {fileID: 289433385}
+  BriefInfoPanelObj: {fileID: 2108772822}
+  panelController: {fileID: 1813968824}
+  closeButtonScript: {fileID: 1547588637}
+--- !u!1 &1962863720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1962863721}
+  - component: {fileID: 1962863724}
+  - component: {fileID: 1962863723}
+  - component: {fileID: 1962863722}
+  m_Layer: 5
+  m_Name: ResumeButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1962863721
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962863720}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.1522319}
+  m_LocalScale: {x: 0.2272096, y: 0.24276821, z: 0.3260378}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 801957100}
+  m_Father: {fileID: 1912985225}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.1, y: 2.4000015}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1962863722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962863720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
+    m_HighlightedColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 1}
+    m_PressedColor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+    m_SelectedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1962863723}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1813968824}
+        m_TargetAssemblyTypeName: PanelController, Assembly-CSharp
+        m_MethodName: OnResumeButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1813968823}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1962863723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962863720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1962863724
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962863720}
+  m_CullTransparentMesh: 1
+--- !u!1 &2033676472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033676473}
+  m_Layer: 0
+  m_Name: SaturnAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2033676473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033676472}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 107.55}
+  m_LocalScale: {x: 2.6, y: 2.6, z: 2.6}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1714591380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2077244511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2077244512}
+  m_Layer: 0
+  m_Name: NeptuneAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2077244512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077244511}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.4, y: 0, z: 158.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 675452830}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2083258732
 GameObject:
   m_ObjectHideFlags: 0
@@ -6200,6 +9915,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1492281223}
   - {fileID: 729760129}
   m_Father: {fileID: 145329968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.707}
@@ -6233,6 +9949,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 1
+--- !u!1 &2105496668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2105496669}
+  m_Layer: 0
+  m_Name: SunAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2105496669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105496668}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -36, y: 6.7, z: -70.83}
+  m_LocalScale: {x: 25, y: 25, z: 25}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 835255747}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2108772817
 GameObject:
   m_ObjectHideFlags: 0
@@ -6244,6 +9991,7 @@ GameObject:
   - component: {fileID: 2108772818}
   - component: {fileID: 2108772821}
   - component: {fileID: 2108772820}
+  - component: {fileID: 2108772822}
   m_Layer: 5
   m_Name: BriefInfoPanel
   m_TagString: Untagged
@@ -6259,8 +10007,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108772817}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.29, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2.7444}
+  m_LocalScale: {x: 0.466871, y: 1.6099, z: 1.6099}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1547588633}
@@ -6268,10 +10016,10 @@ RectTransform:
   - {fileID: 976588961}
   m_Father: {fileID: 1813968822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -430, y: 0}
-  m_SizeDelta: {x: 1115, y: 518}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -625, y: 0}
+  m_SizeDelta: {x: 1215, y: 618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108772820
 MonoBehaviour:
@@ -6311,6 +10059,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108772817}
   m_CullTransparentMesh: 1
+--- !u!114 &2108772822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108772817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c446facdb3038644e8c1306c8820ab89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleText: {fileID: 959846253}
+  sideTitleText: {fileID: 1086933165}
+  dotsText: {fileID: 1349684719}
+  smallInfoText: {fileID: 823222239}
+  bigListText: {fileID: 862206737}
+  SmallList: {fileID: 952592623}
+  bigInfoText: {fileID: 545007689}
+--- !u!1 &2129467021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2129467022}
+  m_Layer: 0
+  m_Name: UranusAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2129467022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129467021}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.87, y: 0, z: 139.49}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 171812794}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2133548514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2133548515}
+  m_Layer: 0
+  m_Name: BHAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2133548515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133548514}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -402.73, y: 50.3, z: -7.7}
+  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1192355107}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

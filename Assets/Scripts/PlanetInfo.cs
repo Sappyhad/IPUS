@@ -1,22 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlanetInfo : MonoBehaviour
 {
     public string planetName;
-    public string planetInfo;
-    public bool shouldBeVisibleAtStart;
-
-    void Start()
-    {
-        // // Inicjalizacja informacji o planecie
-        // planetName = "Nazwa Planety";
-        // planetInfo = "Informacje o planecie...";
-    }
-
-    public void DisplayInformation()
-    {
-        // Wyświetlenie informacji w GUI (np. w panelu UI)
-        Debug.Log("Nazwa: " + planetName + "\nInfo: " + planetInfo);
-    }
+    public string SideTitle = "Statistics & More";
+    public string Dots = ". . .";
+    public string SmallInfo;
+    public string BigInfo;
+    public List<string> List = new List<string>(new string[11]);
+    public List<string> SmallList = new List<string>(new string[7]);
 }

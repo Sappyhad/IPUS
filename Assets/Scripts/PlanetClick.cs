@@ -8,19 +8,37 @@ public class PlanetClick : MonoBehaviour
     public Transform targetTransform;
     public Transform camera;
     public GameObject uiPanel; // Przypisz panel UI do tej zmiennej w inspektorze
+    public GameObject Big_UI_Panel;
     bool nextPosition;
     private bool continueScript = true; // Dodana flaga kontrolna
+
+    public GameObject briefInfoPanelPrefab;
+    private GameObject currentBriefInfoPanel;
 
     private const float Tolerance = 0.1f;
     private const float PanelCloseDelay = 3.0f; // Czas (w sekundach) przed zamknięciem panelu
 
+    public GameObject MainWindow;
+    public InfoFull BriefInfoPanelObj;
+
+    public PanelController panelController;
+
+    public CloseBriefButton closeButtonScript;
+
+
     void Start()
     {
+        panelController = GetComponent<PanelController>();
+        // if (panelController != null)
+        // {
+        //     panelController.SetPlanetClickReference(this);
+        // }
+        
         ResetScript(); // Wywołaj metodę ResetScript na starcie gry
     }
 
     // Metoda resetująca skrypt do początkowego stanu
-    private void ResetScript()
+    public void ResetScript()
     {
         nextPosition = false;
 
@@ -50,7 +68,7 @@ public class PlanetClick : MonoBehaviour
                 // Sprawdź, czy uderzony obiekt to ten, który chcesz obsłużyć
                 if (hit.collider.gameObject == this.gameObject)
                 {
-                    nextPosition = true;
+                    HasBeenPushed();
                 }
             }
         }
@@ -60,44 +78,51 @@ public class PlanetClick : MonoBehaviour
             camera.LookAt(transform.position);
             ChangeCameraPosition(targetTransform);
 
-            // Aktywuj panel UI, jeśli nie jest już aktywny
-            if (uiPanel != null && !uiPanel.activeSelf)
-            {
-                uiPanel.SetActive(true);
-            }
         }
     }
 
     public void ChangeCameraPosition(Transform targetTransform)
     {
+
+        
         camera.position = Vector3.Lerp(camera.position, targetTransform.position, Time.deltaTime / animationDuration);
 
-        if (Vector3.SqrMagnitude(camera.position - targetTransform.position) < Tolerance * Tolerance)
-        {
-            ShowUIPanel();
-        }
+        // if (Vector3.SqrMagnitude(camera.position - targetTransform.position) < Tolerance * Tolerance)
+        // {
+        //     ShowUIPanel();
+        // }
     }
 
-    private void ShowUIPanel()
-    {
-        StartCoroutine(ClosePanelAfterDelay());
-    }
+    // private void ShowUIPanel()
+    // {
+    //     StartCoroutine(ClosePanelAfterDelay());
+    // }
 
-    private IEnumerator ClosePanelAfterDelay()
-    {
-        // Oczekaj przez jakiś czas i zamknij panel
-        yield return new WaitForSeconds(PanelCloseDelay);
+    // private IEnumerator ClosePanelAfterDelay()
+    // {
+    //     // Oczekaj przez jakiś czas i zamknij panel
+    //     yield return new WaitForSeconds(PanelCloseDelay);
 
-        // Sprawdź, czy panel UI jest nadal aktywny
-        if (uiPanel != null && uiPanel.activeSelf)
-        {
-            uiPanel.SetActive(false);
-        }    
+    //     // Sprawdź, czy panel UI jest nadal aktywny
+    //     if (uiPanel != null && uiPanel.activeSelf)
+    //     {
+    //         uiPanel.SetActive(false);
+    //     }    
+    // }
+
+    public void HasBeenPushed(){
+        nextPosition = true;
+        closeButtonScript.SetFocus(this.gameObject);
+        uiPanel.SetActive(true);
+        MainWindow.SetActive(false);
+        BriefInfoPanelObj.DisplayPlanetInfoBrief(GetComponent<PlanetInfo>());
+        Big_UI_Panel.GetComponent<PanelController>().SetPlanetInfo(GetComponent<PlanetInfo>());
     }
 
     // Metoda wywoływana po kliknięciu przycisku "X" w BriefInfoPanel
     public void OnCloseBriefInfoButtonClick()
     {
+        // Zatrzymaj skrypt
         // Zatrzymaj skrypt
         continueScript = false;
 
@@ -108,7 +133,10 @@ public class PlanetClick : MonoBehaviour
         if (uiPanel != null)
         {
             uiPanel.SetActive(false);
+            MainWindow.SetActive(true);
         }
+
+        
     }
 }
 

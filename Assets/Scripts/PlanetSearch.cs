@@ -1,60 +1,3 @@
-// using System.Collections.Generic;
-// using TMPro;
-// using UnityEngine;
-
-// public class PlanetSearch : MonoBehaviour
-// {
-//     public TMP_InputField searchInputField;
-//     public TMP_Text searchResultsText;
-//     public List<PlanetInfo> allPlanets;
-
-//     private void Start()
-//     {
-//         // Pobierz wszystkie obiekty PlanetInfo w scenie
-//         allPlanets = new List<PlanetInfo>(FindObjectsOfType<PlanetInfo>());
-//     }
-
-//     public void SearchPlanets()
-//     {
-//         // Wyszukaj planety po nazwie
-//         string searchText = searchInputField.text.ToLower();
-//         List<string> searchResults = new List<string>();
-
-//         foreach (PlanetInfo planet in allPlanets)
-//         {
-//             // Zmień warunek, aby sprawdzić, czy nazwa zaczyna się od wpisanej litery
-//             if (planet.planetName.ToLower().StartsWith(searchText))
-//             {
-//                 searchResults.Add(planet.planetName);
-//             }
-//         }
-
-//         // Wyświetl wyniki w UI tylko jeśli pole wyszukiwania nie jest puste
-//         if (!string.IsNullOrEmpty(searchText))
-//         {
-//             DisplaySearchResults(searchResults);
-//         }
-//         else
-//         {
-//             // Jeśli pole wyszukiwania jest puste, ukryj wyniki
-//             searchResultsText.text = "";
-//         }
-//     }
-
-//     private void DisplaySearchResults(List<string> results)
-//     {
-//         // Konkatenacja wyników
-//         string resultsText = "Search Results:\n";
-
-//         foreach (string result in results)
-//         {
-//             resultsText += "- " + result + "\n";
-//         }
-
-//         searchResultsText.text = resultsText;
-//     }
-// }
-
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -68,6 +11,8 @@ public class PlanetSearch : MonoBehaviour
 
     private List<PlanetInfo> allPlanets;
     private List<GameObject> resultButtons;
+
+    public List<GameObject> PlanetObjects;
 
     private void Start()
     {
@@ -117,8 +62,15 @@ public class PlanetSearch : MonoBehaviour
     }
 }
 
+
+
     private void OnResultButtonClick(PlanetInfo planet)
     {
+        foreach (GameObject i in PlanetObjects){
+            if (i.GetComponent<PlanetInfo>().planetName == planet.planetName){
+                i.GetComponent<PlanetClick>().HasBeenPushed();
+            }
+        }
         Debug.Log("Clicked on planet: " + planet.planetName);
     }
 
