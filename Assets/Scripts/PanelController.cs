@@ -135,6 +135,7 @@ public class PanelController : MonoBehaviour
         {
             // Schowaj panel AllInfoPanel
             allInfoPanel.SetActive(false);
+            MainWindow.SetActive(true);
         }
     }
 
